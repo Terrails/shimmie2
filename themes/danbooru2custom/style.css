@@ -25,6 +25,8 @@
 
 	--zebra-heading-fg: #171BB3;
 	--zebra-hover-bg: #FFD;
+
+	--caption-bg: #F3F3F8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +47,8 @@
 
 		--zebra-heading-fg: #E8E8EC;
 		--zebra-hover-bg: #2C2D3F;
+
+		--caption-bg: #2A2B3C;
 	}
 }
 
@@ -525,6 +529,33 @@ form+form {
 #Imagemain h3 {
 	display: none;
 }
+
+/* CUSTOMIZATION START: post view layout */
+.post-caption {
+	padding: 0.6rem 0.8rem;
+	border-radius: 0.3rem;
+	background-color: var(--caption-bg);
+}
+
+.post-caption-title {
+	font-weight: bold;
+}
+
+.post-caption-title+.post-caption-description {
+	margin-top: 0.4rem;
+}
+
+/* Editor rows whose info is already in the sidebar - only show them while editing */
+.image_info.infomode-view TR.info-edit-only {
+	display: none;
+}
+
+UL.sidebar-tag-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/* CUSTOMIZATION END */
 
 @media screen and (width <=800px) {
 	BODY.layout-grid {
